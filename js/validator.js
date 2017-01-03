@@ -155,18 +155,12 @@ FormValidation.prototype.isValidSelect = function(value, isRequired)
 
 FormValidation.prototype.isValidDigit = function(value, isRequired)
 {
-   try
-       {
-           var number = parseFloat(value);
-           if(isRequired && (number === undefined || number < 0)) return false;
-           else if(isNaN(number)) return false;
+    if(isRequired && (value === undefined || value.length == 0)) return false;
+    else if(!isRequired && (value === undefined || value.length == 0)) return true;
 
-           return true;
-       }
-       catch(ex)
-       {
-           return false;
-       }
+    var reg = /^[\d. ]+$/;
+
+    return reg.test(value);
 };
 
 FormValidation.prototype.isValidEmail = function(value, isRequired)
@@ -209,6 +203,8 @@ FormValidation.prototype.isValidApexDate = function(value, isRequired)
 {
     if(isRequired && (value === undefined || value.length == 0)) return false;
     else if(!isRequired && (value === undefined || value.length == 0)) return true;
+
     var re = /^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/;
+
     return re.test(value);
 };
