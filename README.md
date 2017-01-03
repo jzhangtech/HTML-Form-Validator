@@ -1,6 +1,8 @@
-# HTML form validator
+# HTML form validator (Jquery/Bootstrap version).
 
-A simple clean HTML form validator in vanilla JavaScript.
+A simple clean HTML form validator
+
+ - With error message display.
 
 
 
