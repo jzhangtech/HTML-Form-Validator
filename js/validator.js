@@ -210,7 +210,6 @@ FormValidation.prototype.isValidApexDate = function(value, isRequired)
 {
     if(isRequired && (value === undefined || value.length == 0)) return false;
     else if(!isRequired && (value === undefined || value.length == 0)) return true;
-    console.log('here');
     var re = /^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/;
     return re.test(value);
 };

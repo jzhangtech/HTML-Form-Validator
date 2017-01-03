@@ -21,7 +21,6 @@ function initValidator()
     validator.addInputElement($('[id$="SSN"]')[0], 'SSN', true);
     validator.addInputElement($('[id$="Dropdown"]')[0], 'Dropdown', true);
     validator.addInputElement($('[id$="PhoneNumber"]')[0], 'Phone Number', true);
-    console.log(validator.inputList.length)
 }
 
 function setDefault()
