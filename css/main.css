@@ -1,14 +1,46 @@
+#validatorForm
+{
+    max-width:1200px;
+    margin:auto;
+}
 
+.title
+{
+    text-align:center;
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+label
+{
+    width:100%;
+}
 
+.action-panel
+{
+    padding:10px;
+}
 
+.flex-h-between
+{
+    display:flex;
+    justify-content:space-between;
+}
 
+.flex
+{
+    display:flex;
+    flex-wrap:wrap;
+}
 
+.flex-33-50-100
+{
+    width:33.333333333%;
+    padding:10px;
+}
 
-
+.invalid
+{
+    border-color:red;
+}
 
 
 

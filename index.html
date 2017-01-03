@@ -8,14 +8,67 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/vendor/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="css/vendor/bootstrap/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="css/vendor/font-awesome/css/font-awesome.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-		<h6>Hello World</h6>
-		<script src="js/vendor/jquery-3.1.1.js"></script>
-		<script src="js/vendor/bootstrap.min.js"></script>
-		<script src="js/main.js"></script>		
+		<h1 class="title">HTML Form Validator</h1>
+		<form action="" method="" id="validatorForm">
+            <section class="flex">
+                <div class="flex-33-50-100">
+                    <label class="">Name
+                        <input type="text" id='Name' class="form-control"/>
+                    </label>
+                </div>
+                <div class="flex-33-50-100">
+                    <label class="control-label">Email
+                        <input type="text" id="Email" class="form-control"/>
+                    </label>
+                </div>
+                <div class="flex-33-50-100">
+                    <label class="control-label">SSN/Fein
+                        <input type="text" id="SSN" class="form-control"/>
+                    </label>
+                </div>
+                <div class="flex-33-50-100">
+                    <label class="control-label">Zipcode
+                        <input type="text" id="Zipcode" class="form-control"/>
+                    </label>
+                </div>
+
+                <div class="flex-33-50-100">
+                    <label class="control-label">Phone Number
+                        <input type="text" id="PhoneNumber" class="form-control"/>
+                    </label>
+                </div>
+                <div class="flex-33-50-100">
+                    <label class="control-label">String
+                        <input type="text" id="String" class="form-control"/>
+                    </label>
+                </div>
+                <div class="flex-33-50-100">
+                    <label class="control-label">Number
+                        <input type="text" id="Digit" class="form-control"/>
+                    </label>
+                </div>
+                <div class="flex-33-50-100">
+                    <label class="control-label">Dropdown
+                        <select type="text" id="Dropdown" class="form-control">
+                            <option>--None--</option>
+                            <option>option 1</option>
+                            <option>option 2</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+            <section class="action-panel">
+                <input class="btn btn-primary" type="submit" value="Submit"/>
+            </section>
+		</form>
 	</body>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous">
+    </script>
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
 </html>
