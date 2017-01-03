@@ -197,14 +197,6 @@ FormValidation.prototype.isValidZipcode = function(value, isRequired)
     return true;
 };
 
-FormValidation.prototype.isValidDate = function(value, isRequired)
-{
-    if(isRequired && (value === undefined || value.length == 0)) return false;
-    else if(!isRequired && (value === undefined || value.length == 0)) return true;
-
-    return value !== undefined && value != "";
-};
-
 FormValidation.prototype.isValidApexDate = function(value, isRequired)
 {
     if(isRequired && (value === undefined || value.length == 0)) return false;
