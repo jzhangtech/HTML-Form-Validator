@@ -24,10 +24,12 @@ FormValidation.prototype.addInputElement = function(elem, type, isRequired)
         if(!isValid)
         {
              $(this).addClass('invalid');
+             $(this).next().css( "visibility", "visible" );
         }
         else
         {
             $(this).removeClass('invalid');
+            $(input.elem).next().css( "visibility", "hidden" );
         }
 
     });
@@ -40,10 +42,12 @@ FormValidation.prototype.addInputElement = function(elem, type, isRequired)
         if(!isValid)
         {
             $(this).addClass('invalid');
+            $(this).next().css( "visibility", "visible" );
         }
         else
         {
             $(this).removeClass('invalid');
+            $(input.elem).next().css( "visibility", "hidden" );
         }
 
     });
@@ -62,10 +66,12 @@ FormValidation.prototype.refreshValidation = function()
         {
             isValid = false;
             $(input.elem).addClass('invalid');
+            $(input.elem).next().css( "visibility", "visible" );
         }
         else
         {
             $(input.elem).removeClass('invalid');
+            $(input.elem).next().css( "visibility", "hidden" );
         }
 
     }

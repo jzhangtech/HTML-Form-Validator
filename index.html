@@ -17,37 +17,44 @@
                 <div class="col-md-4 col-sm-6 input-wrapper">
                     <label class="">Name
                         <input placeholder="John Smith" type="text" id='Name' class="form-control"/>
+                        <div class="errorMsg">Accepts letters only (A-Z) (a-z)</div>
                     </label>
                 </div>
                 <div class="col-md-4 col-sm-6 input-wrapper">
                     <label class="control-label">Number
                         <input type="text" id="Digit" placeholder="123123" class="form-control"/>
+                        <div class="errorMsg">Accepts numbers</div>
                     </label>
                 </div>
                 <div class="col-md-4 col-sm-6 input-wrapper">
                     <label class="control-label">String
                         <input type="text" placeholder="JohnSmith123" id="String" class="form-control"/>
+                        <div class="errorMsg">Accepts letters and numbers</div>
                     </label>
                 </div>
                 <div class="col-md-4 col-sm-6 input-wrapper">
                     <label class="control-label">Email
                         <input type="text" placeholder="JSmith@Github.com" id="Email" class="form-control"/>
+                        <div class="errorMsg">Accepts valid emails</div>
                     </label>
                 </div>
                 <div class="col-md-4 col-sm-6 input-wrapper">
                     <label class="control-label">SSN/Fein
                         <input type="text" id="SSN" placeholder="111-11-1111" class="form-control"/>
+                        <div class="errorMsg">Accepts digits and dashes </div>
                     </label>
                 </div>
                 <div class="col-md-4 col-sm-6 input-wrapper">
                     <label class="control-label">Zipcode
                         <input type="text" id="Zipcode" placeholder="10002" class="form-control"/>
+                        <div class="errorMsg">Accepts digits and dashes</div>
                     </label>
                 </div>
 
                 <div class="col-md-4 col-sm-6 input-wrapper">
                     <label class="control-label">Phone Number
                         <input type="text" id="PhoneNumber" placeholder="(212) 212-6699" class="form-control"/>
+                        <div class="errorMsg">Accepts digits and symbols</div>
                     </label>
                 </div>
                 <div class="col-md-4 col-sm-6 input-wrapper">
@@ -57,6 +64,7 @@
                             <option>option 1</option>
                             <option>option 2</option>
                         </select>
+                        <div class="errorMsg">Anything but default</div>
                     </label>
                 </div>
             </section>

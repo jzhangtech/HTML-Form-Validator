@@ -24,6 +24,13 @@ label
     border-color:red;
 }
 
+.errorMsg
+{
+    color:#c30808;
+    font-size:12px;
+    visibility: hidden;
+}
+
 .input-wrapper
 {
     padding: 0px 5px;
