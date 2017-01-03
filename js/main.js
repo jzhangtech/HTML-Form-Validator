@@ -6,18 +6,10 @@ $(document).ready(function()
 function init()
 {
     initValidator();
-
-    $(document).on("keypress", "form", function(event)
-    {
-        return event.keyCode != 13;
-    });
-
-    $( "#validatorForm" ).submit(function(event)
-    {
-        event.preventDefault();
-        if(validator.refreshValidation()) success();
-    });
+    setDefault();
+    prepForm();
 }
+
 function initValidator()
 {
     validator = new FormValidation();
@@ -32,8 +24,24 @@ function initValidator()
     console.log(validator.inputList.length)
 }
 
-
-function success()
+function setDefault()
 {
-    console.log('success');
+    $(document).on("keypress", "form", function(event)
+    {
+        return event.keyCode != 13;
+    });
+}
+
+function prepForm()
+{
+    $( "#validatorForm" ).submit(function(event)
+    {
+        event.preventDefault();
+        if(validator.refreshValidation()) submitForm();
+    });
+}
+
+function submitForm()
+{
+    alert('success');
 }

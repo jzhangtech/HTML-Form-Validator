@@ -5,20 +5,16 @@ function FormValidation()
 
 FormValidation.prototype.addInputElement = function(elem, type, isRequired)
 {
-    if(elem === undefined || type === undefined)
-    {
-        console.log('failed');
-        return false;
-    }
+    if(elem === undefined || type === undefined) return false;
 
     var instance = this;
-    var inputSetup = {
+    var validatorObj = {
         elem: elem,
         type: type,
         isRequired: isRequired !== undefined ? isRequired : false
     };
 
-    this.inputList.push(inputSetup);
+    this.inputList.push(validatorObj);
 
     $(elem).keyup(function()
     {
@@ -27,7 +23,7 @@ FormValidation.prototype.addInputElement = function(elem, type, isRequired)
 
         if(!isValid)
         {
-            $(this).addClass('invalid');
+             $(this).addClass('invalid');
         }
         else
         {

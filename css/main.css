@@ -16,25 +16,7 @@ label
 
 .action-panel
 {
-    padding:10px;
-}
-
-.flex-h-between
-{
-    display:flex;
-    justify-content:space-between;
-}
-
-.flex
-{
-    display:flex;
-    flex-wrap:wrap;
-}
-
-.flex-33-50-100
-{
-    width:33.333333333%;
-    padding:10px;
+    padding-left: 30px;
 }
 
 .invalid
