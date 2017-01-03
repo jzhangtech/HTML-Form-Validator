@@ -16,7 +16,7 @@ label
 
 .action-panel
 {
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .invalid
@@ -24,6 +24,10 @@ label
     border-color:red;
 }
 
+.input-wrapper
+{
+    padding: 0px 5px;
+}
 
 
 
