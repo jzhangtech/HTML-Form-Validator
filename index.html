@@ -5,52 +5,51 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Hello World</title>
-		<meta name="description" content="">
+		<meta name="description" content="HTML form validator">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/vendor/bootstrap/bootstrap.min.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 		<h1 class="title">HTML Form Validator</h1>
 		<form action="" method="" id="validatorForm">
-            <section class="col-xs-12 clearfix">
-                <div class="col-md-4 col-sm-6 input-wrapper">
+            <section class="flex">
+                <div class="flex-33-50-100 input-wrapper">
                     <label class="">Name
                         <input placeholder="John Smith" type="text" id='Name' class="form-control"/>
                     </label>
                 </div>
-                <div class="col-md-4 col-sm-6 input-wrapper">
+                <div class="flex-33-50-100 input-wrapper">
                     <label class="control-label">Number
                         <input type="text" id="Digit" placeholder="123123" class="form-control"/>
                     </label>
                 </div>
-                <div class="col-md-4 col-sm-6 input-wrapper">
+                <div class="flex-33-50-100 input-wrapper">
                     <label class="control-label">String
                         <input type="text" placeholder="JohnSmith123" id="String" class="form-control"/>
                     </label>
                 </div>
-                <div class="col-md-4 col-sm-6 input-wrapper">
+                <div class="flex-33-50-100 input-wrapper">
                     <label class="control-label">Email
                         <input type="text" placeholder="JSmith@Github.com" id="Email" class="form-control"/>
                     </label>
                 </div>
-                <div class="col-md-4 col-sm-6 input-wrapper">
+                <div class="flex-33-50-100 input-wrapper">
                     <label class="control-label">SSN/Fein
                         <input type="text" id="SSN" placeholder="111-11-1111" class="form-control"/>
                     </label>
                 </div>
-                <div class="col-md-4 col-sm-6 input-wrapper">
+                <div class="flex-33-50-100 input-wrapper">
                     <label class="control-label">Zipcode
                         <input type="text" id="Zipcode" placeholder="10002" class="form-control"/>
                     </label>
                 </div>
 
-                <div class="col-md-4 col-sm-6 input-wrapper">
+                <div class="flex-33-50-100 input-wrapper">
                     <label class="control-label">Phone Number
                         <input type="text" id="PhoneNumber" placeholder="(212) 212-6699" class="form-control"/>
                     </label>
                 </div>
-                <div class="col-md-4 col-sm-6 input-wrapper">
+                <div class="flex-33-50-100 input-wrapper">
                     <label class="control-label">Dropdown
                         <select type="text" id="Dropdown" class="form-control">
                             <option>--None--</option>
@@ -60,15 +59,11 @@
                     </label>
                 </div>
             </section>
-            <section class="action-panel col-xs-12">
-                <input class="btn btn-primary" type="submit" value="Submit"/>
+            <section class="action-panel">
+                <input class="btn-custom1" type="submit" value="Submit"/>
             </section>
 		</form>
+        <script src="js/main.js"></script>
+        <script src="js/validator.js"></script>
 	</body>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous">
-    </script>
-    <script src="js/validator.js"></script>
-    <script src="js/main.js"></script>
 </html>

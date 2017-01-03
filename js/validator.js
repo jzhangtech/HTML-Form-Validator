@@ -8,7 +8,8 @@ FormValidation.prototype.addInputElement = function(elem, type, isRequired)
     if(elem === undefined || type === undefined) return false;
 
     var instance = this;
-    var validatorObj = {
+    var validatorObj =
+    {
         elem: elem,
         type: type,
         isRequired: isRequired !== undefined ? isRequired : false
@@ -16,34 +17,34 @@ FormValidation.prototype.addInputElement = function(elem, type, isRequired)
 
     this.inputList.push(validatorObj);
 
-    $(elem).keyup(function()
+    elem.addEventListener('keyup', function()
     {
         var input = instance.getInputById(this.id);
         var isValid = instance.isValid(input.type, this.value, input.isRequired);
 
         if(!isValid)
         {
-             $(this).addClass('invalid');
+             this.classList.add('invalid');
         }
         else
         {
-            $(this).removeClass('invalid');
+            this.classList.remove('invalid');
         }
 
     });
 
-    $(elem).change(function()
+    elem.addEventListener('change', function()
     {
         var input = instance.getInputById(this.id);
         var isValid = instance.isValid(input.type, this.value, input.isRequired);
 
         if(!isValid)
         {
-            $(this).addClass('invalid');
+            this.classList.add('invalid');
         }
         else
         {
-            $(this).removeClass('invalid');
+            this.classList.remove('invalid');
         }
 
     });
@@ -57,17 +58,16 @@ FormValidation.prototype.refreshValidation = function()
     for(var inputIndex = 0; inputIndex < this.inputList.length; inputIndex++)
     {
         var input = this.inputList[inputIndex];
-
-        if(!this.isValid(input.type, $(input.elem).val(), input.isRequired))
+        var ele = document.querySelector('#' + input.elem.id);
+        if(!this.isValid(input.type, ele.value, input.isRequired))
         {
             isValid = false;
-            $(input.elem).addClass('invalid');
+            ele.classList.add('invalid');
         }
         else
         {
-            $(input.elem).removeClass('invalid');
+            ele.classList.remove('invalid');
         }
-
     }
 
     return isValid;
@@ -78,7 +78,7 @@ FormValidation.prototype.isEverythingValid = function()
     for(var inputIndex = 0; inputIndex < this.inputList.length; inputIndex++)
     {
         var input = this.inputList[inputIndex];
-        if(!this.isValid(input.type, $(input.elem).val(), input.isRequired)) return false;
+        if(!this.isValid(input.type, document.querySelector(input.elem).val(), input.isRequired)) return false;
     }
 
     return true;
