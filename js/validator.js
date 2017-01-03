@@ -142,7 +142,7 @@ FormValidation.prototype.isValidString = function(value, isRequired)
     if(isRequired && (value === undefined || value.trim().length == 0)) return false;
     else if(!isRequired && (value === undefined || value.trim().length == 0)) return true;
 
-    return /^[0-9a-zA-Z\s\;\-.\"\'()\/&#,:]+$/.test(value);
+    return /^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/.test(value);
 };
 
 FormValidation.prototype.isValidSelect = function(value, isRequired)
@@ -192,8 +192,7 @@ FormValidation.prototype.isValidZipcode = function(value, isRequired)
     else if(!isRequired && (value === undefined || value.length == 0)) return true;
 
     var temp = value.replace(/[^0-9\.]+/g, '');
-    if(temp.length != 5 && temp.length != 9)
-        return false;
+    if(temp.length != 5 && temp.length != 9) return false;
 
     return true;
 };
