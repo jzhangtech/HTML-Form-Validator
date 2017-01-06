@@ -31,25 +31,8 @@ label
     padding: 0px 5px;
 }
 
-.flex-h-between
+.form-control
 {
-    display:flex;
-    justify-content:space-between;
-}
-
-.flex
-{
-    display:flex;
-    flex-wrap:wrap;
-}
-
-.flex-33-50-100
-{
-    width:33.333333333%;
-    padding:5px;
-}
-
-.form-control {
     display: block;
     width: 100%;
     padding: 8px 5px;
@@ -90,6 +73,43 @@ input:focus
     background-color: #337ab7;
     color: white;
     font-weight: bold;
+}
+
+.flex-h-between
+{
+    display:flex;
+    justify-content:space-between;
+}
+
+.flex
+{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.flex-33-50-100
+{
+    width:100%;
+    padding:5px;
+}
+
+
+@media (min-width: 768px)
+{
+    .flex-33-50-100
+    {
+        width:50%;
+        padding:5px;
+    }
+}
+
+@media (min-width: 1025px)
+{
+    .flex-33-50-100
+    {
+        width:33.33%;
+        padding:5px;
+    }
 }
 
 
